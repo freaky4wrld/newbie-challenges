@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Results summary component</title>
 </head>
 <body class="bg-white font-sans m-0">
-  <div class="container flex flex-col m-0 border-2 rounded-2xl
-    justify-between md:w-3/5 md:flex-row md:mx-auto md:my-7">
+  <div class="container flex flex-col m-0 justify-between border-2 
+    rounded-3xl border-paleBlue border-opacity-50 md:w-3/5 md:flex-row md:mx-auto md:my-7">
     <div class="flex flex-col h-3/4 items-center space-y-12 bg-gradient-to-b
-     from-lightSlateBlue to-lightRoyalBlue py-12 rounded-xl md:w-1/2">
+     from-lightSlateBlue to-lightRoyalBlue py-12 rounded-3xl md:w-1/2">
       <p class="text-md text-lightLavender text-2xl font-bold">Your Result</p>
       <div class="flex flex-col  px-9 py-7 rounded-full
        items-center justify-between bg-gradient-to-b from-violetBlue to-persianBlue">
@@ -27,7 +27,69 @@
         </p>
       </div>
     </div>
-    
+    <div class="flex flex-col h-3/4 items-start p-7 md:w-1/2 space-y-7">
+      <h4 class="text-xl text-darkGrayBlue font-bold">Summary</h4>
+      <div class="container flex flex-col space-y-5 md:space-y-5">
+        <div class="result-element bg-lightRed p-3 rounded-md bg-opacity-20">
+          <div class="flex flex-row justify-between">
+            <div class="flex flex-row space-x-2">
+              <img src="" alt="reaction-icon">
+              <p class="text-lightRed"></p>
+            </div>
+            <div class="flex flex-row space-x-1">
+              <p class="font-bold text-darkGrayBlue"></p>
+              <p class="text-gray-500 font-semibold">/</p>
+              <p class="text-gray-500 font-semibold">100</p>
+            </div>
+          </div>
+        </div>
+        <div class="result-element bg-orangeyYellow p-3 rounded-md bg-opacity-20">
+          <div class="flex flex-row justify-between">
+            <div class="flex flex-row space-x-2">
+              <img src="" alt="reaction-icon">
+              <p class="text-orangeyYellow"></p>
+            </div>
+            <div class="flex flex-row space-x-1">
+              <p class="font-bold text-darkGrayBlue"></p>
+              <p class="text-gray-500 font-semibold">/</p>
+              <p class="text-gray-500 font-semibold">100</p>
+            </div>
+          </div>
+        </div>
+        <div class="result-element bg-greenTeal p-3 rounded-md bg-opacity-20">
+          <div class="flex flex-row justify-between">
+            <div class="flex flex-row space-x-2">
+              <img src="" alt="reaction-icon">
+              <p class="text-greenTeal"></p>
+            </div>
+            <div class="flex flex-row space-x-1">
+              <p class="font-bold text-darkGrayBlue"></p>
+              <p class="text-gray-500 font-semibold">/</p>
+              <p class="text-gray-500 font-semibold">100</p>
+            </div>
+          </div>
+        </div>
+        <div class="result-element bg-cobaltBlue p-3 rounded-md bg-opacity-20">
+          <div class="flex flex-row justify-between">
+            <div class="flex flex-row space-x-2">
+              <img src="" alt="reaction-icon">
+              <p class="text-cobaltBlue"></p>
+            </div>
+            <div class="flex flex-row space-x-1">
+              <p class="font-bold text-darkGrayBlue"></p>
+              <p class="text-gray-500 font-semibold">/</p>
+              <p class="text-gray-500 font-semibold">100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="container p-4
+       bg-darkGrayBlue rounded-full text-lg font-bold text-white
+       hover:bg-gradient-to-b from-lightSlateBlue to-lightRoyalBlue">
+        Continue
+      </button>
+    </div>
   </div>
+  <script src="../data.js"></script>
 </body>
 </html>
