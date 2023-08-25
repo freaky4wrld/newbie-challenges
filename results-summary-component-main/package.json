@@ -1,0 +1,16 @@
+{
+  "name": "results-summary-component-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "data.js",
+  "scripts": {
+    "build": "tailwind -i ./src/style.css -o ./public/styles.css",
+    "run:css": "tailwind -i ./src/style.css -o ./public/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
