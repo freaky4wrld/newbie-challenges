@@ -26,7 +26,7 @@ module.exports = {
         darkGrayBlue: 'hsl(224, 30%, 27%)',
     },
     fontFamily: {
-      'sans': ['hanken', 'sans-serif'],
+      'sans': ['Hanken Grotesk', 'sans-serif'],
     }
     },
   },
