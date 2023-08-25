@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: hanken;
+    font-family: 'hanken';
     src: url(../assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
 }
