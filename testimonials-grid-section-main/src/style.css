@@ -3,3 +3,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-quotation{
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 430px 13px;
+}
+
+@media screen and (max-width:500px) {
+    .bg-quotation{
+        background-position: 210px 0px;
+        background-size: 120px;
+    }
+}
