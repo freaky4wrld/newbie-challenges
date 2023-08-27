@@ -3,3 +3,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-icons{
+    background-image: url(./images/bg-intro-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.input-icon{
+    background-image: url(./images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 290px 12px;
+    border-color: hsl(0, 100%, 74%);
+}
+
+@media screen and (max-width: 600px) {
+    .bg-icons{
+        background-image: url(./images/bg-intro-mobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

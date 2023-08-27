@@ -13,10 +13,10 @@ module.exports = {
         'sans': ['Poppins', 'sans-serif'],
       },
       colors: {
-        Red: 'hsl(0, 100%, 74%) ',
+        Red: 'hsl(0, 100%, 74%)',
         Green: 'hsl(154, 59%, 51%)',
         Blue: 'hsl(248, 32%, 49%)',
-        darkBlue: 'hsl(249, 10%, 26%) ',
+        darkBlue: 'hsla(249, 10%, 26%,0.7) ',
         grayishBlue: 'hsl(246, 25%, 77%)',
       }
     },
