@@ -1,0 +1,12 @@
+%btn{
+    display: inline;
+    padding: 0.7rem 1.2rem;
+    border-radius: 2rem;
+    @include changeFontUpper();
+    border: solid $white 1px;
+}
+%btn:hover{background-color: $button-hover; color: $white; border-color: $button-hover; cursor: pointer;} 
+.nav-btn{
+    @extend %btn;
+    background-color: $white;
+}

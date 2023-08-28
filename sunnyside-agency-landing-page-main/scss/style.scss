@@ -1,0 +1,84 @@
+@import 'config';
+@import 'button';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{width: 100%;}
+.showcase{
+    padding: 2.1rem 0;
+    width: 100%;
+    min-height: 84vh;
+    font-family: setFontBrawl();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3.6rem;
+    background-image: url(../images/desktop/image-header.jpg);
+    background-position: center;
+    background-size: cover;
+    nav{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul{
+            width: 36%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+
+            li{
+                a{
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        h1{
+            font-weight: 900;
+            font-size: 3rem;
+            color: $white;
+            word-spacing: 0.5rem;
+            letter-spacing: 0.5rem;
+            @include changeFontUpper()
+        }
+    }
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .side-by-side{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+        .no-img-text{
+            display: flex;
+            flex-direction: column;
+            padding: 7rem;
+
+            h2{
+                font-family: setFontFranuces();
+                font-size: 2rem;
+                width: 60%;
+            }
+            p{
+                font-family: setFontFranuces();
+            }
+        }
+    }
+}
