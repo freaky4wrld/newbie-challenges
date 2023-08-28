@@ -35,28 +35,28 @@
       class="flex flex-col border-2 border-white bg-white
       rounded-lg p-4 space-y-4 md:p-9">
         <div class="container space-x-3">
-          <input type="text" name="firstName" id="firstName"
-            aria-placeholder="First Name" placeholder="First Name"
-            class="p-3 border border-grayishBlue rounded-md" required>
-          <p class="text-Red text-xs text-right hidden">Error</p>  
+          <input type="text" name="firstName" id="firstName" aria-labelledby="first name"
+            aria-describedby="firstNameError" aria-placeholder="First Name" placeholder="First Name"
+            class="p-3 border border-grayishBlue rounded-md" required minlength="3">
+          <p class="text-Red text-xs text-right hidden" id="firstNameError">Error</p>  
         </div>
         <div class="container space-x-3">
-          <input type="text" name="lastName" id="lastName"
-            aria-placeholder="Last Name" placeholder="Last Name"
-            class="p-3 border border-grayishBlue rounded-md" required>
-          <p class="text-Red text-xs text-right hidden">Error</p>  
+          <input type="text" name="lastName" id="lastName" aria-labelledby="last name"
+            aria-describedby="lastNameError" aria-placeholder="Last Name" placeholder="Last Name"
+            class="p-3 border border-grayishBlue rounded-md" required minlength="3">
+          <p class="text-Red text-xs text-right hidden" id="lastNameError">Error</p>  
         </div>
         <div class="container space-x-3">
-          <input type="email" name="email" id="email"
-            aria-placeholder="Email Address" placeholder="Email Address"
+          <input type="email" name="email" id="email" aria-labelledby="user email"
+            aria-describedby="emailError" aria-placeholder="Email Address" placeholder="Email Address"
             class="p-3 border border-grayishBlue rounded-md" required>
-          <p class="text-Red text-xs text-right hidden">Error</p>  
+          <p class="text-Red text-xs text-right hidden" id="emailError">Error</p>  
         </div>
         <div class="container space-x-3">
-          <input type="password" name="userPassword" id="userPassword"
-            aria-placeholder="Password" placeholder="Password"
-            class="p-3 border border-grayishBlue rounded-md" required>
-          <p class="text-Red text-xs text-right hidden">Error</p>  
+          <input type="password" name="userPassword" id="userPassword" aria-labelledby="user password"
+            aria-describedby="passwordError" aria-placeholder="Password" placeholder="Password"
+            class="p-3 border border-grayishBlue rounded-md" minlength="8" maxlength="200" required>
+          <p class="text-Red text-xs text-right hidden" id="passwordError">Error</p>  
         </div>
         <button type="submit" class="bg-Green text-white p-3
          text-lg uppercase rounded-md shadow-sm shadow-Green

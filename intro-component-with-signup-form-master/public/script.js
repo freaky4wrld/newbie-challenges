@@ -1,27 +1,41 @@
-const firstName = document.getElementById('firstName');
-const lastName = document.getElementById('lastName');
-const email = document.getElementById('email');
-const userPassword = document.getElementById('userPassword');
-const inputElements = document.querySelectorAll('input');
+const trialForm = document.getElementById('trial-form')
+trialForm.setAttribute('novalidate',"")
+const inputFields = Array.from(trialForm.elements);
 
-function checkRequired(){
-    inputElements.forEach((input)=>{
-        if(input.hasAttribute('required') && input.value===""){
-            showRequired(input);
-        }else{
-            hideRequired(input)
+inputFields.forEach((inputField)=>{
+    inputField.setAttribute('aria-invalid',false)
+
+    inputField.addEventListener('blur',()=>{
+        inputField.checkValidity()
+    })
+    inputField.addEventListener('input',()=>{
+        const valid = inputField.checkValidity()
+        if(valid){
+            inputField.setAttribute('aria-invalid',false)
+            inputField.classList.remove('input-icon')
+            inputField.nextElementSibling.classList.add('hidden')
+            inputField.nextElementSibling.innerText = ''
         }
     })
-}
+    inputField.addEventListener('invalid',()=>{
+        const message = getMessage(inputField)
+        inputField.setAttribute('aria-invalid',true)
+        inputField.classList.add('input-icon')
+        inputField.nextElementSibling.classList.remove('hidden')
+        inputField.nextElementSibling.innerText = message || inputField.validationMessage
+    })
+})
 
-function showRequired(input){
-    input.classList.add('input-icon')
-    input.nextElementSibling.innerText = 'This field can not be empty'
-    input.nextElementSibling.classList.remove('hidden')
-    
-}
-function hideRequired(input){
-    input.classList.remove('input-icon')
-    input.nextElementSibling.innerText = ''
-    input.nextElementSibling.classList.add('hidden')
+trialForm.addEventListener('submit',(event)=>{
+    const allValid = trialForm.checkValidity();
+    if(!allValid){
+        event.preventDefault()
+    }
+})
+
+function getMessage(inputField){
+    const validity = inputField.validity
+    if(validity.valueMissing) return `${inputField.getAttribute('placeholder')} cannot be empty`
+    if(validity.typeMismatch) return 'Looks like this is not an email'
+    if(validity.tooShort) return`${inputField.getAttribute('placeholder')} must be at least ${inputField.getAttribute('minlength')} characters`
 }
