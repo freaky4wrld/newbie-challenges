@@ -19,9 +19,26 @@ $white: hsl(0, 0%, 100%);
     text-transform: uppercase;
 }
 
+@mixin makeCard(){
+    display: flex;
+    flex-direction: column;
+    padding: 9rem 7rem;
+    gap: 2.5rem;
+
+}
+
+@mixin cardHead(){
+    font-family: setFontFranuces();
+    font-size: 2rem;
+    width: 60%;
+}
+@mixin cardText(){
+    width: 70%;
+    font-family: setFontBrawl();
+}
 @function setFontFraucnces(){
-    @return 'Fraunces', sans-serif
+    @return 'Fraunces';
 }
 @function setFontBrawl(){
-    @return 'Barlow', sans-serif
+    @return 'Barlow';
 }

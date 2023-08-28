@@ -6,6 +6,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    overflow-x: hidden;
+}
 .container{width: 100%;}
 .showcase{
     padding: 2.1rem 0;
@@ -57,6 +60,20 @@
     }
 }
 
+#graphic{
+    background-image: url(../images/desktop/image-graphic-design.jpg);
+    background-size: cover;
+    h2,p{
+        color: $dark-desaturated-cyan;
+    }
+}
+#photography{
+    background-image: url(../images/desktop/image-photography.jpg);
+    background-size: cover;
+    h2,p{
+        color:$dark-blue;
+    }
+}
 main{
     display: flex;
     flex-direction: column;
@@ -67,17 +84,36 @@ main{
         grid-template-columns: repeat(2,1fr);
 
         .no-img-text{
-            display: flex;
-            flex-direction: column;
-            padding: 7rem;
-
+            @include makeCard();
             h2{
-                font-family: setFontFranuces();
-                font-size: 2rem;
-                width: 60%;
+                @include cardHead();
             }
             p{
-                font-family: setFontFranuces();
+                @include cardText();
+                color: $dark-grayish-blue;
+            }
+            a{
+                @include changeFontUpper();
+                color: black;
+                text-decoration-color: $yellow;
+                text-decoration-thickness: 0.3rem;
+            }
+            .colorchange{
+                text-decoration-color: $soft-red;
+            }
+        }
+        .img-text{
+            @include makeCard();
+            padding: 20rem 7rem 1rem 7rem;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+
+            h2{
+                @include cardHead();
+            }
+            p{
+                @include cardText();
             }
         }
     }
