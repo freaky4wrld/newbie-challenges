@@ -801,7 +801,32 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.focus\:outline-Blue:focus{
+  outline-color: hsl(248, 32%, 49%);
+}
+
+.focus\:outline-Green:focus{
+  outline-color: hsl(154, 59%, 51%);
+}
+
+.focus\:outline-current:focus{
+  outline-color: currentColor;
+}
+
+.focus\:outline-darkBlue:focus{
+  outline-color: hsla(249, 10%, 26%,0.7) ;
+}
+
+.focus\:outline-Red:focus{
+  outline-color: hsl(0, 100%, 74%);
+}
+
 @media (min-width: 768px){
+  .md\:my-12{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
   .md\:w-3\/4{
     width: 75%;
   }

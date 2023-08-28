@@ -13,6 +13,7 @@ inputFields.forEach((inputField)=>{
         if(valid){
             inputField.setAttribute('aria-invalid',false)
             inputField.classList.remove('input-icon')
+            inputField.classList.remove('animate__animated','animate__shakeX');
             inputField.nextElementSibling.classList.add('hidden')
             inputField.nextElementSibling.innerText = ''
         }
@@ -21,6 +22,7 @@ inputFields.forEach((inputField)=>{
         const message = getMessage(inputField)
         inputField.setAttribute('aria-invalid',true)
         inputField.classList.add('input-icon')
+        inputField.classList.add('animate__animated','animate__shakeX');
         inputField.nextElementSibling.classList.remove('hidden')
         inputField.nextElementSibling.innerText = message || inputField.validationMessage
     })
