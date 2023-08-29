@@ -1,0 +1,33 @@
+@media (max-width: 1160px) {
+    .cards-container{
+        width: 93%;
+        .card{
+            padding: 1.8rem
+        }
+    }
+    %btn{
+        width: 75%;
+    }
+}
+
+@media (max-width: 786px){
+    .cards-container{
+        flex-direction: column;
+        margin: 7rem auto;
+
+        .card{
+            padding: 2.7rem
+        }
+
+        .left{
+            border-radius: 9px 9px 0 0;
+        }
+        .right{
+            border-radius: 0 0 9px 9px;
+        }
+    }
+    %btn{
+        width: 50%;
+    }
+    
+}
