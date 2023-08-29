@@ -1,5 +1,6 @@
 @import 'config';
 @import 'button';
+@import 'tab_responsive';
 
 *{
     box-sizing: border-box;
@@ -7,7 +8,7 @@
     padding: 0;
 }
 body{
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 .container{width: 100%;}
 a:hover{cursor: pointer;}
@@ -76,8 +77,9 @@ main{
     align-items: center;
 
     .side-by-side{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0rem;
 
         .no-img-text{
             @include makeCard();
@@ -100,10 +102,17 @@ main{
                 text-decoration-color: $soft-red;
             }
         }
+        .img-container{
+            width: 50%;
+            height: 540px;
+            img{
+                width: 100%;
+            }
+        }
         .img-text{
             @include makeCard();
-            padding: 20rem 7rem 1rem 7rem;
-            justify-content: flex-start;
+            justify-content: flex-end;
+            padding-bottom: 4rem;
             align-items: center;
             text-align: center;
 

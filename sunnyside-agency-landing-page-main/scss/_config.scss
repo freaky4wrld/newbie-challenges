@@ -21,9 +21,12 @@ $white: hsl(0, 0%, 100%);
 }
 
 @mixin makeCard(){
+    width: 50%;
+    height: 540px;
     display: flex;
     flex-direction: column;
-    padding: 9rem;
+    justify-content: center;
+    padding: 0 4rem;;
     gap: 2.5rem;
 
 }
