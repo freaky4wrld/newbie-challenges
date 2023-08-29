@@ -1,8 +1,11 @@
 .head{
     font-family: setHeadFont();
     text-transform: uppercase;
+    color: setColor($very-light-gray);
 }
 .text{
     font-family: setTextFont();
-    width: 88%
+    // width: 93%;
+    font-size: 16px;
+    color: setColor($transparent-white);
 }

@@ -1,19 +1,22 @@
 %btn{
-    width: 54%;
-    background-color: setColor($very-light-gray);
+    // width: 70%;
+    width: 63%;
     border: solid 2px setColor($very-light-gray);
     font-family: setTextFont();
     font-size: 16px;
     border-radius: 3rem ;
-    padding: 0.999rem 2rem;
+    padding: 0.7rem 1.2rem;
 }
 
 .left-btn{
     @extend %btn;
+    @include colorElement($bright-orange, $very-light-gray);
 }
 .mid-btn{
     @extend %btn;
+    @include colorElement($dark-cyan, $very-light-gray);
 }
 .right-btn{
     @extend %btn;
+    @include colorElement($very-dark-cyan, $very-light-gray);
 }

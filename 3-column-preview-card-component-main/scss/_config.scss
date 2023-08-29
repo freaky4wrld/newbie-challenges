@@ -8,7 +8,7 @@ $transparent-white: hsla(0, 0%, 100%, 0.75); //(paragraphs)
 $very-light-gray: hsl(0, 0%, 95%); //(background, headings, buttons)
 
 @mixin containerAtMid(){
-    margin: 4rem auto;
+    margin: 12rem auto;
 }
 
 @function setHeadFont(){
@@ -21,4 +21,13 @@ $very-light-gray: hsl(0, 0%, 95%); //(background, headings, buttons)
 
 @function setColor($color){
     @return $color;
+}
+
+@mixin setBgColor($color){
+    background-color: $color;
+}
+
+@mixin colorElement($color, $bg-color){
+    background-color: $bg-color;
+    color: $color;
 }

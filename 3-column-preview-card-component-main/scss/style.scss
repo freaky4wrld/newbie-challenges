@@ -6,19 +6,32 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    @include setBgColor($transparent-white);
+}
 .cards-container{
     width: 72%;
     @include containerAtMid();
     display:flex;
-
     .card{
         display: flex;
         flex-direction: column;
         gap: 3rem;
+        padding: 2rem;
 
         img{
             width: 30%;
         }
+    }
+    .left{
+        @include setBgColor($bright-orange);
+        border-radius: 9px 0 0 9px;
+    }
+    .mid{
+        @include setBgColor($dark-cyan);
+    }
+    .right{
+        @include setBgColor($very-dark-cyan);
+        border-radius: 0 9px 9px 0;
     }
 }
