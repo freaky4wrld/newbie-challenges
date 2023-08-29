@@ -1,0 +1,24 @@
+@import 'config';
+@import 'utils';
+@import 'button';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cards-container{
+    width: 72%;
+    @include containerAtMid();
+    display:flex;
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        img{
+            width: 30%;
+        }
+    }
+}

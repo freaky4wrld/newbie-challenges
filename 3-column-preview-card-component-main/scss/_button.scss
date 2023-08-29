@@ -1,0 +1,19 @@
+%btn{
+    width: 54%;
+    background-color: setColor($very-light-gray);
+    border: solid 2px setColor($very-light-gray);
+    font-family: setTextFont();
+    font-size: 16px;
+    border-radius: 3rem ;
+    padding: 0.999rem 2rem;
+}
+
+.left-btn{
+    @extend %btn;
+}
+.mid-btn{
+    @extend %btn;
+}
+.right-btn{
+    @extend %btn;
+}
