@@ -6,6 +6,7 @@ $yellow: hsl(51, 100%, 49%);
 $dark-desaturated-cyan: hsl(167, 40%, 24%); //(graphic design text)
 $dark-blue: hsl(198, 62%, 26%); //(photography text)
 $dark-moderate-cyan: hsl(168, 34%, 41%); //(footer)
+$footer-bg: hsl(168, 42%, 77%); //(footer-bg)
 
 //neutral
 $very-dark-desaturated-blue: hsl(212, 27%, 19%);
@@ -22,7 +23,7 @@ $white: hsl(0, 0%, 100%);
 @mixin makeCard(){
     display: flex;
     flex-direction: column;
-    padding: 9rem 7rem;
+    padding: 9rem;
     gap: 2.5rem;
 
 }
@@ -30,11 +31,23 @@ $white: hsl(0, 0%, 100%);
 @mixin cardHead(){
     font-family: setFontFranuces();
     font-size: 2rem;
-    width: 60%;
+    width: 70%;
 }
 @mixin cardText(){
-    width: 70%;
+    width: 81%;
     font-family: setFontBrawl();
+}
+
+@mixin linksList(){
+    width: 36%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+@mixin colorLinks($color){
+    color: $color;
+    text-decoration: none;
 }
 @function setFontFraucnces(){
     @return 'Fraunces';

@@ -10,6 +10,7 @@ body{
     overflow-x: hidden;
 }
 .container{width: 100%;}
+a:hover{cursor: pointer;}
 .showcase{
     padding: 2.1rem 0;
     width: 100%;
@@ -30,16 +31,11 @@ body{
         align-items: center;
 
         ul{
-            width: 36%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            list-style: none;
+            @include linksList();
 
             li{
                 a{
-                    color: $white;
-                    text-decoration: none;
+                    @include colorLinks($white);
                 }
             }
         }
@@ -48,7 +44,7 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 3rem;
+        gap: 2rem;
         h1{
             font-weight: 900;
             font-size: 3rem;
@@ -87,6 +83,7 @@ main{
             @include makeCard();
             h2{
                 @include cardHead();
+                color:$very-dark-desaturated-blue;
             }
             p{
                 @include cardText();
@@ -94,9 +91,10 @@ main{
             }
             a{
                 @include changeFontUpper();
-                color: black;
-                text-decoration-color: $yellow;
-                text-decoration-thickness: 0.3rem;
+                color: $very-dark-desaturated-blue;
+                text-decoration: underline $yellow;
+                text-decoration-thickness: 0.3rem; 
+                
             }
             .colorchange{
                 text-decoration-color: $soft-red;
@@ -116,5 +114,95 @@ main{
                 @include cardText();
             }
         }
+    }
+    .down-by-down{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .testimonials-outer{
+            padding: 4rem 2rem;
+            h3{
+              @include changeFontUpper();
+              font-size: 1.5rem;
+              color: $grayish-blue;
+              text-align: center;
+            }
+            .testimonials-inner{
+                margin: 2.5rem auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                .testimonial-card{
+                    display: flex;
+                    flex-direction: column;
+                    width: 30%;
+                    gap: 2rem;
+                    align-items: center;
+                    img{
+                        width: 21%;
+                        border-radius: 50%;
+                    }
+                    p{
+                        font-family: setFontBrawl();
+                        line-height: 1.5;
+                        text-align: center;
+                        width: 85%;
+                        color: $dark-grayish-blue;
+                    }
+                    .credentials{
+                        .name{
+                            font-family: setFontFraucnces();
+                            font-size: 1.3rem;
+                            width: 100%;
+                            color: $very-dark-desaturated-blue;
+                        }
+                        .position{
+                            font-size: 0.9rem;
+                            width: 100%;
+                            color: $grayish-blue;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .image-show{
+            display: flex;
+            img{
+                width: 25%;
+            }
+        }
+    }
+}
+footer{
+    background-color: $footer-bg;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    .footer-logo{
+        width: 20%;
+    }
+    ul{
+        @include linksList();
+        justify-content: space-around;
+        a{
+            @include colorLinks($dark-moderate-cyan);
+            font-family: setFontBrawl();
+        }
+        a:hover{
+            color: $white;
+        }
+    }
+    .icons-list{
+        display: flex;
+        width: 21%;
+        justify-content: space-around;
+        align-items: center;
     }
 }
