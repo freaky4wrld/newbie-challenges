@@ -14,6 +14,7 @@
 }
 .left-btn:hover{
     @include colorElement($very-light-gray, $bright-orange);
+    transition-duration: 0.2s;
 }
 .mid-btn{
     @extend %btn;
@@ -21,6 +22,7 @@
 }
 .mid-btn:hover{
     @include colorElement($very-light-gray, $dark-cyan);
+    transition-duration: 0.2s;
 }
 .right-btn{
     @extend %btn;
@@ -28,4 +30,5 @@
 }
 .right-btn:hover{
     @include colorElement($very-light-gray, $very-dark-cyan);
+    transition-duration: 0.2s;
 }

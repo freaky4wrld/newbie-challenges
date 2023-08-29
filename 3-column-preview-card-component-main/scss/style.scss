@@ -14,6 +14,7 @@ body{
     width: 72%;
     @include containerAtMid();
     display:flex;
+
     .card{
         display: flex;
         flex-direction: column;
@@ -27,14 +28,85 @@ body{
     .left{
         @include setBgColor($bright-orange);
         border-radius: 9px 0 0 9px;
+        animation-name: swipeLeft;
+        animation-duration: 0.390s;
     }
     .mid{
         @include setBgColor($dark-cyan);
+        animation-name: swipeUp;
+        animation-duration: 0.390s;
     }
     .right{
         @include setBgColor($very-dark-cyan);
         border-radius: 0 9px 9px 0;
+        animation-name: swipeRight;
+        animation-duration: 0.390s;
+    }
+    @keyframes swipeLeft {
+        0%{
+            opacity: 0;
+            transform: translateX(-802px)
+        }
+        25%{
+            opacity: 0.25;
+            transform: translateX(-604px)
+        }
+        50%{
+            opacity: 0.50;
+            transform: translateX(-406px)
+        }
+        75%{
+            opacity: 0.75;
+            transform: translateX(-208px)
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0px)
+        }
+    }
+    @keyframes swipeRight {
+        0%{
+            opacity: 0;
+            transform: translateX(802px)
+        }
+        25%{
+            opacity: 0.25;
+            transform: translateX(604px)
+        }
+        50%{
+            opacity: 0.50;
+            transform: translateX(406px)
+        }
+        75%{
+            opacity: 0.75;
+            transform: translateX(208px)
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0px)
+        }
+    }
+    @keyframes swipeUp {
+        0%{
+            opacity: 0;
+            transform: translateY(802px)
+        }
+        25%{
+            opacity: 0.25;
+            transform: translateY(604px)
+        }
+        50%{
+            opacity: 0.50;
+            transform: translateY(406px)
+        }
+        75%{
+            opacity: 0.75;
+            transform: translateY(208px)
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0px)
+        }
     }
 }
-
 @import 'responsive';
