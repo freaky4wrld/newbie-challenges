@@ -7,16 +7,25 @@
     border-radius: 3rem ;
     padding: 0.7rem 1.2rem;
 }
-
+%btn:hover{cursor: pointer}
 .left-btn{
     @extend %btn;
     @include colorElement($bright-orange, $very-light-gray);
+}
+.left-btn:hover{
+    @include colorElement($very-light-gray, $bright-orange);
 }
 .mid-btn{
     @extend %btn;
     @include colorElement($dark-cyan, $very-light-gray);
 }
+.mid-btn:hover{
+    @include colorElement($very-light-gray, $dark-cyan);
+}
 .right-btn{
     @extend %btn;
     @include colorElement($very-dark-cyan, $very-light-gray);
+}
+.right-btn:hover{
+    @include colorElement($very-light-gray, $very-dark-cyan);
 }
