@@ -6,3 +6,85 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Inter';
+    background-image: url(../images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-position: bottom -90px left 0;
+    background-size: 63%;
+    min-width: 100dvw;
+    max-width: 100dvh;
+}
+#slide-first{
+    display: none;
+}
+.slide-container{
+    width: 81%;
+    margin: 4rem auto;
+    min-height: 80dvh;
+    padding: 4.3rem 0;
+    background-image: url(../images/pattern-quotes.svg), url(../images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 9%, 52%;
+    background-position: top 88px left 162px , top right;
+    .slides{
+        display: flex;
+        align-items: center;
+        .text-container{
+            position: relative;
+            left: 54px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 70%;
+            .views{
+                z-index: 2;
+                width: 100%;
+                font-size: $text-default;
+                font-weight: 300;
+                color: $dark-blue;
+            }
+            .credentials{
+                display: flex;
+                align-items: center;
+                gap: 0.7rem;
+                .name{
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: $dark-blue;
+                }
+                .position{
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: $grayish-blue
+                }
+            }
+        }
+        .img-container{
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            .profile{
+                width: 84%;
+                box-shadow: 4px 21px 50px rgb(59, 56, 56);
+            }
+            .slider-options{
+                display: flex;
+                position: relative;
+                bottom: 20px;
+                left: 36px;
+                #prev, #next{
+                    padding: 7px 12px;
+                    border: 0.5px solid white;
+                    background-color: white;
+                }
+                #prev{
+                    border-radius: 16px 0px 0px 16px;
+                }
+                #next{
+                    border-radius: 0px 16px 16px 0px;
+                }
+            }
+        }
+    }
+}
