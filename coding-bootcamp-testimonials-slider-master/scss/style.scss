@@ -15,9 +15,6 @@ body{
     min-width: 100dvw;
     max-width: 100dvh;
 }
-#slide-first{
-    display: none;
-}
 .slide-container{
     width: 81%;
     margin: 4rem auto;
@@ -27,8 +24,12 @@ body{
     background-repeat: no-repeat;
     background-size: 9%, 52%;
     background-position: top 88px left 162px , top right;
+    animation-name: slideLeft;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    
     .slides{
-        display: flex;
+        display: none;
         align-items: center;
         .text-container{
             position: relative;
@@ -77,6 +78,7 @@ body{
                     padding: 7px 12px;
                     border: 0.5px solid white;
                     background-color: white;
+                    transition-duration: 0.9s;
                 }
                 #prev{
                     border-radius: 16px 0px 0px 16px;
@@ -84,7 +86,59 @@ body{
                 #next{
                     border-radius: 0px 16px 16px 0px;
                 }
+                #prev:hover, #next:hover{
+                    background-color: $dark-blue;
+                    cursor: pointer;
+                    border-color: $dark-blue
+                }
             }
         }
+    }
+    .show{display: flex;}
+}
+
+@keyframes slideLeft {
+    0%{
+        opacity: -1;
+        transform: translateX(800px);
+    }
+    25%{
+        opacity: 0;
+        transform: translateX(600px);
+    }
+    50%{
+        opacity: 0.25;
+        transform: translateX(400px);
+    }
+    75%{
+        opacity: 0.5;
+        transform: translateX(200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideRight {
+    0%{
+        opacity: -1;
+        transform: translateX(-800px);
+    }
+    25%{
+        opacity: 0;
+        transform: translateX(-600px);
+    }
+    50%{
+        opacity: 0.25;
+        transform: translateX(-400px);
+    }
+    75%{
+        opacity: 0.5;
+        transform: translateX(-200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
