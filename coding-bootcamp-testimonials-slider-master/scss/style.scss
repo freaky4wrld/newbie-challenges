@@ -1,6 +1,5 @@
 @import 'config';
 
-
 *{
     padding: 0;
     margin: 0;
@@ -10,26 +9,24 @@ body{
     font-family: 'Inter';
     background-image: url(../images/pattern-curve.svg);
     background-repeat: no-repeat;
-    background-position: bottom -90px left 0;
-    background-size: 63%;
-    min-width: 100dvw;
-    max-width: 100dvh;
+    background-position: bottom left ;
+    background-size: 50%;
+    min-height: 100vh;
+
 }
 .slide-container{
     width: 81%;
     margin: 4rem auto;
-    min-height: 80dvh;
+    min-height: 70vh;
     padding: 4.3rem 0;
     background-image: url(../images/pattern-quotes.svg), url(../images/pattern-bg.svg);
     background-repeat: no-repeat;
     background-size: 9%, 52%;
     background-position: top 88px left 162px , top right;
-    animation-name: slideLeft;
-    animation-duration: 0.4s;
-    animation-timing-function: ease-out;
+    animation: slideDown 0.4s ease-out;
     
     .slides{
-        display: none;
+        display: flex;
         align-items: center;
         .text-container{
             position: relative;
@@ -74,19 +71,19 @@ body{
                 position: relative;
                 bottom: 20px;
                 left: 36px;
-                #prev, #next{
+                .prev , .next{
                     padding: 7px 12px;
                     border: 0.5px solid white;
                     background-color: white;
                     transition-duration: 0.9s;
                 }
-                #prev{
+                .prev{
                     border-radius: 16px 0px 0px 16px;
                 }
-                #next{
+                .next{
                     border-radius: 0px 16px 16px 0px;
                 }
-                #prev:hover, #next:hover{
+                .prev:hover, .next:hover{
                     background-color: $dark-blue;
                     cursor: pointer;
                     border-color: $dark-blue
@@ -94,7 +91,7 @@ body{
             }
         }
     }
-    .show{display: flex;}
+    .hide{display: none;}
 }
 
 @keyframes slideLeft {
@@ -142,3 +139,30 @@ body{
         transform: translateX(0px);
     }
 }
+
+@keyframes slideDown {
+    0%{
+        opacity: -1;
+        transform: translateY(-800px);
+    }
+    25%{
+        opacity: 0;
+        transform: translateY(-600px);
+    }
+    50%{
+        opacity: 0.25;
+        transform: translateY(-400px);
+    }
+    75%{
+        opacity: 0.5;
+        transform: translateY(-200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+@import 'responsive';
